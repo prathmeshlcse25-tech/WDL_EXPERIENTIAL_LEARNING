@@ -173,7 +173,7 @@
       li.style.padding = '10px';
       li.style.background = '#d5f4e6';
       li.style.borderRadius = '6px';
-      li.innerHTML = ✅ ${data};
+      li.innerHTML = `✅ ${data}`;
       droppedList.appendChild(li);
     });
 
@@ -199,7 +199,7 @@
             `;
           },
           (error) => {
-            result.innerHTML = <strong>❌ Error:</strong> ${error.message};
+            result.innerHTML = `<strong>❌ Error:</strong> ${error.message}`;
           }
         );
       } else {
@@ -217,13 +217,13 @@
       
       localStorage.setItem('studentName', name);
       displaySavedName();
-      alert(Name "${name}" saved using localStorage!);
+      alert(`Name "${name}" saved using localStorage!`);
     }
 
     function displaySavedName() {
       const saved = localStorage.getItem('studentName');
       document.getElementById('displayName').innerHTML = 
-        saved ? <strong>${saved}</strong> (saved using Web Storage) : "No data saved yet";
+        saved ? `<strong>${saved}</strong> (saved using Web Storage)` : "No data saved yet";
     }
 
     function clearStorage() {
