@@ -47,6 +47,7 @@
       color: #27ae60;
     }
     .draggable {
+        transition: transform 0.2s;
       padding: 15px;
       margin: 8px;
       background: #3498db;
@@ -57,6 +58,7 @@
       width: 120px;
       text-align: center;
     }
+    .draggable:hover { transform: scale(1.05); background: #2980b9; }
 
     /* Geolocation Section */
     #locationResult {
