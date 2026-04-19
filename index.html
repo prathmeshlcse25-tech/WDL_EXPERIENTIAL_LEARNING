@@ -1,53 +1,109 @@
-
 <html>
-<head><title>Skyline Properties</title></head>
+<head>
+  <title>Skyline Properties</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { background-color: #eef2f7; font-family: Arial, sans-serif; }
+    h1 { color: #1a3c5e; }
+    .card { border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.12); border-radius: 10px; }
+    .card-img-top { height: 160px; object-fit: cover; border-radius: 10px 10px 0 0; }
+    .sidebar { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .modal-box { display:none; position:fixed; top:25%; left:33%; background:white; padding:25px; border-radius:10px; z-index:999; width:320px; box-shadow:0 4px 20px rgba(0,0,0,0.25); }
+    .modal-box h5 { color: #1a3c5e; }
+    .badge-tag { background-color: #1a3c5e; color: white; padding: 3px 8px; border-radius: 5px; font-size: 12px; }
+  </style>
+</head>
 <body>
+<div class="container mt-4">
+  <h1 class="text-center fw-bold">🏠 Skyline Properties</h1>
+  <p class="text-center text-muted">Find Your Dream Home</p>
+  <hr>
+  <div class="row g-4">
 
-<h1 align="center">Skyline Properties</h1>
-<h3>Real Estate Portal</h3><hr>
-<table border="1" cellpadding="5">
-<tr>
-<td valign="top" width="180">
-  <h3>filter</h3>
-  Price: <select><option>All</option><option>Below 50L</option><option>Above 1Cr</option></select><br><br>
-  BHK: <select><option>All</option><option>1 BHK</option><option>2 BHK</option><option>3 BHK</option><option>4 BHK</option></select><br><br>
-  <input type="button" value="Search">
-</td>
-<td valign="top">
-  <h3>Listings</h3>
-  <table border="1" cellpadding="4"><tr>
-    <td><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Green Valley" width="250"></td>
-    <td>Green Valley | 2BHK | 45L | Pune<br>
-    <input type="button" value="details" onclick="document.getElementById('m1').style.display='block'"></td>
-  </tr></table><br>
-  <table border="1" cellpadding="4"><tr>
-    <td><img src="https://images.pexels.com/photos/323772/pexels-photo-323772.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Skyline Heights" width="250"></td>
-    <td>Skyline Heights | 3BHK | 90L | Mumbai<br>
-    <input type="button" value="details" onclick="document.getElementById('m2').style.display='block'"></td>
-  </tr></table><br>
-  <table border="1" cellpadding="4"><tr>
-    <td><img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Blue Star" width="250"></td>
-    <td>Blue Star | 1BHK | 25L | Nashik<br>
-    <input type="button" value="detals" onclick="document.getElementById('m3').style.display='block'"></td>
-  </tr></table>
-</td>
-</tr>
-</table>
-<div id="m1" style="display:none;border:1px solid black;padding:10px;width:320px">
-  <b>Green Valley</b> | 2BHK | 45L | Pune<br>Area: 950sqft | Contact: 9876543210<br>
-  <input type="button" value="x Close" onclick="document.getElementById('m1').style.display='none'">
-</div>
-<div id="m2" style="display:none;border:1px solid black;padding:10px;width:320px">
-  <b>Skyline Heights</b> | 3BHK | 90L | Mumbai<br>Area: 1400sqft | Contact: 9123456780<br>
-  <input type="button" value="x Close" onclick="document.getElementById('m2').style.display='none'">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <div class="sidebar">
+        <h5 class="fw-bold mb-3">🔍 Filter</h5>
+        <label class="form-label">Price Range</label>
+        <select class="form-select mb-3">
+          <option>All</option>
+          <option>Below 50L</option>
+          <option>50L - 1Cr</option>
+          <option>Above 1Cr</option>
+        </select>
+        <label class="form-label">BHK Type</label>
+        <select class="form-select mb-3">
+          <option>All</option>
+          <option>1 BHK</option>
+          <option>2 BHK</option>
+          <option>3 BHK</option>
+          <option>4 BHK</option>
+        </select>
+        <button class="btn btn-primary w-100 fw-bold">Search</button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="col-md-9">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=400" class="card-img-top">
+            <div class="card-body">
+              <h6 class="fw-bold">Green Valley</h6>
+              <span class="badge-tag">2 BHK</span> <span class="badge-tag">Pune</span>
+              <p class="mt-2 mb-1 text-success fw-bold">₹ 45 Lakhs</p>
+              <button class="btn btn-sm btn-outline-primary w-100" onclick="document.getElementById('m1').style.display='block'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/323772/pexels-photo-323772.jpeg?w=400" class="card-img-top">
+            <div class="card-body">
+              <h6 class="fw-bold">Skyline Heights</h6>
+              <span class="badge-tag">3 BHK</span> <span class="badge-tag">Mumbai</span>
+              <p class="mt-2 mb-1 text-success fw-bold">₹ 90 Lakhs</p>
+              <button class="btn btn-sm btn-outline-primary w-100" onclick="document.getElementById('m2').style.display='block'">View Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?w=400" class="card-img-top">
+            <div class="card-body">
+              <h6 class="fw-bold">Blue Star</h6>
+              <span class="badge-tag">1 BHK</span> <span class="badge-tag">Nashik</span>
+              <p class="mt-2 mb-1 text-success fw-bold">₹ 25 Lakhs</p>
+              <button class="btn btn-sm btn-outline-primary w-100" onclick="document.getElementById('m3').style.display='block'">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id="m3" style="display:none;border:1px solid black;padding:10px;width:320px">
-  <b>Blue Star</b> | 1BHK | 25L | Nashik<br>Area: 600sqft | Contact: 9988776655<br>
-  <input type="button" value="x Close" onclick="document.getElementById('m3').style.display='none'">
+<!-- Modals -->
+<div class="modal-box" id="m1">
+  <h5>🏡 Green Valley</h5>
+  <hr>
+  📍 Location: Pune<br>🛏️ 2 BHK &nbsp; 📐 950 sqft<br>💰 Price: ₹45 Lakhs<br>📞 Contact: 9876543210
+  <br><br><button class="btn btn-danger w-100" onclick="document.getElementById('m1').style.display='none'">Close</button>
 </div>
-<hr>
-<center><small>@ 2026 Skyline Properties</small></center>
-<!-- Commit 1 -->
+<div class="modal-box" id="m2">
+  <h5>🏢 Skyline Heights</h5>
+  <hr>
+  📍 Location: Mumbai<br>🛏️ 3 BHK &nbsp; 📐 1400 sqft<br>💰 Price: ₹90 Lakhs<br>📞 Contact: 9123456780
+  <br><br><button class="btn btn-danger w-100" onclick="document.getElementById('m2').style.display='none'">Close</button>
+</div>
+<div class="modal-box" id="m3">
+  <h5>⭐ Blue Star</h5>
+  <hr>
+  📍 Location: Nashik<br>🛏️ 1 BHK &nbsp; 📐 600 sqft<br>💰 Price: ₹25 Lakhs<br>📞 Contact: 9988776655
+  <br><br><button class="btn btn-danger w-100" onclick="document.getElementById('m3').style.display='none'">Close</button>
+</div>
+
+<hr><p class="text-center text-muted">© 2026 Skyline Properties. All rights reserved.</p>
 </body>
 </html>
