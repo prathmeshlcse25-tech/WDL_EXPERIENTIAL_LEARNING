@@ -156,7 +156,13 @@
             </div>
           </div>
         </div>
-
+<!-- Improvement 12: 4th card Sun Villa -->
+        <div class="col-md-4">
+          <div class="card">
+            <figure class="mb-0">
+              <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?w=400" class="card-img-top" alt="Sun Villa">
+              <figcaption class="text-center" style="font-size:11px;color:gray;">Sun Villa, Bangalore</figcaption>
+            </figure>
       </div>
     </div>
   </div>
