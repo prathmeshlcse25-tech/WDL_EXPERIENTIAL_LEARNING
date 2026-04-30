@@ -130,6 +130,8 @@
               <details>
                 <summary>View Details</summary>
                 <p>📍 Mumbai &nbsp; 🛏️ 3 BHK &nbsp; 📐 1400 sqft<br>📞 9123456780</p>
+                <!-- Improvement 10: listed date with time tag -->
+                Listed: <time datetime="2026-01-15">Jan 2026</time></p>
               </details>
             </div>
           </div>
