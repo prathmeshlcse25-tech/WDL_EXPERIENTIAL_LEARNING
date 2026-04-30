@@ -1,5 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skyline Properties - Find your dream home">
+
   <title>Skyline Properties</title>
   <h1>Skyline Properties</h1>
   <p>Find Your Dream Home</p>
@@ -131,23 +136,4 @@
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
-</html>// auto commit 1
-// auto commit 2
-// auto commit 3
-// auto commit 4
-// auto commit 5
-// auto commit 6
-// auto commit 7
-// auto commit 8
-// auto commit 9
-// auto commit 10
-// auto commit 11
-// auto commit 12
-// auto commit 13
-// auto commit 14
-// auto commit 15
-// auto commit 16
-// auto commit 17
-// auto commit 18
-// auto commit 19
-// auto commit 20
+</html>
