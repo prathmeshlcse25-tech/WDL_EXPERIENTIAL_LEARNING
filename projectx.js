@@ -65,15 +65,20 @@
         </select>
 
         <!-- Improvement 4: Reset button -->
-        
+
         <button class="btn btn-success w-100 fw-bold">Apply Filters</button>
 
         <hr>
+        <!-- Improvement 5: Progress Bars -->
+
+
         <p class="fw-bold mb-1" style="font-size:14px;">🔥 Deals Closing Soon</p>
         <small>Green Valley</small>
         <progress value="80" max="100" style="width:100%"></progress>
         <small>Skyline Heights</small>
         <progress value="55" max="100" style="width:100%"></progress>
+        <small>Sun Villa</small>
+        <progress value="90" max="100" style="width:100%"></progress>
       </div>
     </div>
 
