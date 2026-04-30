@@ -228,6 +228,10 @@
     document.getElementById("bhkFilter").value = "All";
     filterCards();
   }
+  // Improvement 17: search on Enter key
+  document.getElementById("searchInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") filterCards();
+  });
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
