@@ -37,6 +37,7 @@
         <option value="Hydrabad">
           <option value="Chennai">
     </datalist>
+    <button calss="btn btn-primary search-btn" oneclick="filterCards()"> Search</button></button>
   </div>
 
   <hr>
