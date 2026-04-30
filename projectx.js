@@ -108,7 +108,9 @@
               <p class="mt-2 mb-1 text-success fw-bold">₹ 45 Lakhs</p>
               <details>
                 <summary>View Details</summary>
-                <p>📍 Pune &nbsp; 🛏️ 2 BHK &nbsp; 📐 950 sqft<br>📞 9876543210</p>
+                <p>📍 Pune &nbsp; 🛏️ 2 BHK &nbsp; 📐 950 sqft<br>📞 9876543210<br>
+                <mark><New Launch></mark></p>
+              
               </details>
             </div>
           </div>
@@ -124,6 +126,7 @@
               <h6 class="fw-bold text-primary">Skyline Heights</h6>
               <span class="badge-tag">3 BHK</span> <span class="badge-tag">Mumbai</span>
               <p class="mt-2 mb-1 text-success fw-bold">₹ 90 Lakhs</p>
+              <small>Rating:</small> <meter value="5" min="0" max="5"></meter>
               <details>
                 <summary>View Details</summary>
                 <p>📍 Mumbai &nbsp; 🛏️ 3 BHK &nbsp; 📐 1400 sqft<br>📞 9123456780</p>
