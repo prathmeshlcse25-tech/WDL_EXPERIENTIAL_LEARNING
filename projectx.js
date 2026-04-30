@@ -58,7 +58,7 @@
           <option>Above 1Cr</option>
         </select>
         <label class="form-label">BHK Type</label>
-        <select class="form-select mb-3">
+        <select class="form-select mb-3"> id="bhkFilter">
           <option>All</option>
           <option>1 BHK</option>
           <option>2 BHK</option>
