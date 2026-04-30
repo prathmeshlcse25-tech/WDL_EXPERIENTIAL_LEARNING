@@ -58,7 +58,7 @@
           <option>Above 1Cr</option>
         </select>
         <label class="form-label">BHK Type</label>
-        <select class="form-select mb-3"> id="bhkFilter">
+        <select class="form-select mb-3" id="bhkFilter">
           <option>All</option>
           <option>1 BHK</option>
           <option>2 BHK</option>
@@ -82,12 +82,19 @@
         <progress value="55" max="100" style="width:100%"></progress>
         <small>Sun Villa</small>
         <progress value="90" max="100" style="width:100%"></progress>
+        <hr>
+
+        <!-- Improvement 6: total listings count -->
+        <p class="text-muted" style="font-size:13px;">📋 Total Listings: <strong>5</strong></p>
       </div>
     </div>
 
     <!-- Cards -->
     <div class="col-md-9">
-      <div class="row g-3">
+      <div class="row g-3" id="card-container">
+        <!-- Improvement 7: figure + figcaption on all cards -->
+        <!-- Improvement 8: meter rating tag -->
+        <!-- Improvement 9: sold badge on one card -->
 
         <div class="col-md-4">
           <div class="card">
