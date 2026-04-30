@@ -163,6 +163,19 @@
               <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?w=400" class="card-img-top" alt="Sun Villa">
               <figcaption class="text-center" style="font-size:11px;color:gray;">Sun Villa, Bangalore</figcaption>
             </figure>
+            <div class="card-body">
+              <h6 class="fw-bold text-primary">Sun Villa</h6>
+              <span class="badge-tag">4 BHK</span> <span class="badge-tag">Bangalore</span>
+              <p class="mt-2 mb-1 text-success fw-bold">₹ 1.2 Cr</p>
+              <small>Rating:</small> <meter value="4" min="0" max="5"></meter>
+              <details>
+                <summary>View Details</summary>
+                <p>📍 Bangalore &nbsp; 🛏️ 4 BHK &nbsp; 📐 2100 sqft<br>📞 9111222333<br>
+                Listed: <time datetime="2026-02-10">Feb 2026</time></p>
+              </details>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
