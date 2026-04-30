@@ -1,6 +1,8 @@
 <html>
 <head>
   <title>Skyline Properties</title>
+  <h1>Skyline Properties</h1>
+  <p>Find Your Dream Home</p>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <style>
     body { background-color: #f0f4f8; font-family: Arial, sans-serif; }
