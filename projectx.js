@@ -180,6 +180,30 @@
     </div>
   </div>
 </div>
+<!-- Improvement 13: 5th card Royal Nest -->
+        <div class="col-md-4">
+          <div class="card">
+            <figure class="mb-0">
+              <img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?w=400" class="card-img-top" alt="Royal Nest">
+              <figcaption class="text-center" style="font-size:11px;color:gray;">Royal Nest, Delhi</figcaption>
+            </figure>
+            <div class="card-body">
+              <h6 class="fw-bold text-primary">Royal Nest</h6>
+              <span class="badge-tag">3 BHK</span> <span class="badge-tag">Delhi</span>
+              <p class="mt-2 mb-1 text-success fw-bold">₹ 75 Lakhs</p>
+              <small>Rating:</small> <meter value="5" min="0" max="5"></meter>
+              <details>
+                <summary>View Details</summary>
+                <p>📍 Delhi &nbsp; 🛏️ 3 BHK &nbsp; 📐 1350 sqft<br>📞 9444555666<br>
+                <mark>Featured Property</mark></p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
