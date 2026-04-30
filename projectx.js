@@ -204,7 +204,23 @@
       </div>
     </div>
   </div>
+<!-- Improvement 14: footer with time tag -->
+<hr>
+<p class="text-center text-muted pt-2">
+  © <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.
+</p>
 
+<!-- Improvement 15-20: JS for filter, search, reset -->
+<script>
+  // Improvement 15: filter function
+  function filterCards() {
+    const city = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll("#card-container .col-md-4");
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(city) || city === "" ? "block" : "none";
+    });
+  }
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
