@@ -22,6 +22,8 @@
 </head>
 <body>
 <div class="container mt-4">
+  <!-- Improvement 1: Hero section -->
+  <div class="hero text-center"></div>
   <h1 class="text-center fw-bold mb-2">🏠 Skyline Properties</h1>
   <p class="text-center text-muted mb-3">Find Your Dream Home in Prime Locations</p>
 
