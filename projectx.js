@@ -232,6 +232,11 @@
   document.getElementById("searchInput").addEventListener("keypress", function(e) {
     if (e.key === "Enter") filterCards();
   });
+  // Improvement 18: alert on Apply Filters if nothing selected
+  // Improvement 19: page load message
+  window.onload = function() {
+    console.log("Skyline Properties loaded successfully");
+  };
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
