@@ -132,3 +132,4 @@
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
 </html>// auto commit 1
+// auto commit 2
