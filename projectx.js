@@ -237,6 +237,12 @@
   window.onload = function() {
     console.log("Skyline Properties loaded successfully");
   };
+  // Improvement 20: scroll to top on logo click
+  document.querySelector("h1").style.cursor = "pointer";
+  document.querySelector("h1").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
