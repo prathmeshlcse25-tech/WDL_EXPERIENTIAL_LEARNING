@@ -26,7 +26,8 @@
   <div class="hero text-center"></div>
   <h1 class="text-center fw-bold mb-2">🏠 Skyline Properties</h1>
   <p class="text-center text-muted mb-3">Find Your Dream Home in Prime Locations</p>
-
+<!-- Improvement 2: datalist with more cities -->
+  <!-- Improvement 3: search button added --></div>
   <!-- Search with datalist -->
   <div class="text-center mb-4">
     <input list="cities" class="form-control w-50 mx-auto" placeholder="Search by city...">
