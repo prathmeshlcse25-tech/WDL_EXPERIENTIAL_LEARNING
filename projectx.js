@@ -147,6 +147,8 @@
               <h6 class="fw-bold text-primary">Blue Star</h6>
               <span class="badge-tag">1 BHK</span> <span class="badge-tag">Nashik</span>
               <p class="mt-2 mb-1 text-success fw-bold">₹ 25 Lakhs</p>
+              <small>Rating:</small> <meter value="3" min="0" max="5"></meter>
+          
               <details>
                 <summary>View Details</summary>
                 <p>📍 Nashik &nbsp; 🛏️ 1 BHK &nbsp; 📐 600 sqft<br>📞 9988776655</p>
