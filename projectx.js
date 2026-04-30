@@ -221,6 +221,13 @@
       card.style.display = text.includes(city) || city === "" ? "block" : "none";
     });
   }
+  // Improvement 16: reset function
+  function resetFilters() {
+    document.getElementById("searchInput").value = "";
+    document.getElementById("priceFilter").value = "All";
+    document.getElementById("bhkFilter").value = "All";
+    filterCards();
+  }
 <hr>
 <p class="text-center text-muted pt-2">© <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.</p>
 </body>
