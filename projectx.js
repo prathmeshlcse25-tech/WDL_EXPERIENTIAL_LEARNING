@@ -61,7 +61,11 @@
           <option>2 BHK</option>
           <option>3 BHK</option>
           <option>4 BHK</option>
+          <option>5 BHK</option>
         </select>
+
+        <!-- Improvement 4: Reset button -->
+        
         <button class="btn btn-success w-100 fw-bold">Apply Filters</button>
 
         <hr>
