@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skyline Properties | Premium Real Estate</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,28 +16,27 @@
 
   <div id="api-result"></div>
 
-  <div style="display: flex; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto;">
+  <div>
 
-    <div class="sidebar" style="flex: 1; max-width: 300px;">
+    <div class="sidebar">
       <h3>Filters</h3>
-      <div style="margin-bottom: 15px;">
+      <div>
         <label>Search City:</label><br>
-        <input type="text" id="searchInput" placeholder="Enter city (e.g. Pune)"
-          style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+        <input type="text" id="searchInput" placeholder="Enter city (e.g. Pune)">
       </div>
 
-      <div style="margin-bottom: 15px;">
+      <div>
         <label>Price Range:</label><br>
-        <select id="priceFilter" style="width: 100%; padding: 8px; border-radius: 5px;">
+        <select id="priceFilter">
           <option>All</option>
           <option>Below 50L</option>
           <option>Above 1Cr</option>
         </select>
       </div>
 
-      <div style="margin-bottom: 15px;">
+      <div>
         <label>BHK:</label><br>
-        <select id="bhkFilter" style="width: 100%; padding: 8px; border-radius: 5px;">
+        <select id="bhkFilter">
           <option>All</option>
           <option>1 BHK</option>
           <option>2 BHK</option>
@@ -48,22 +45,19 @@
         </select>
       </div>
 
-      <button class="search-btn" onclick="searchCity()"
-        style="width: 100%; padding: 10px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Search</button>
-      <button onclick="resetFilters()"
-        style="width: 100%; margin-top: 10px; padding: 10px; background: #eee; border: none; border-radius: 5px; cursor: pointer;">Reset</button>
+      <button class="search-btn" onclick="searchCity()">Search</button>
+      <button onclick="resetFilters()">Reset</button>
     </div>
 
-    <div id="card-container"
-      style="flex: 3; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+    <div id="card-container">
 
       <div class="col-md-4">
-        <div class="card" style="background: white; padding: 0; overflow: hidden;">
+        <div class="card">
           <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600"
             class="card-img-top" alt="Green Valley">
-          <div style="padding: 15px;">
+          <div>
             <span class="badge-tag">2 BHK</span>
-            <h4 style="margin: 10px 0;">Green Valley</h4>
+            <h4>Green Valley</h4>
             <p>📍 Pune | 💰 45L</p>
             <details>
               <summary>View Details</summary>
@@ -73,14 +67,13 @@
         </div>
       </div>
 
-
       <div class="col-md-4">
-        <div class="card" style="background: white; padding: 0; overflow: hidden;">
+        <div class="card">
           <img src="https://images.pexels.com/photos/323772/pexels-photo-323772.jpeg?auto=compress&cs=tinysrgb&w=600"
             class="card-img-top" alt="Skyline Heights">
-          <div style="padding: 15px;">
+          <div>
             <span class="badge-tag">3 BHK</span>
-            <h4 style="margin: 10px 0;">Skyline Heights</h4>
+            <h4>Skyline Heights</h4>
             <p>📍 Mumbai | 💰 90L</p>
             <details>
               <summary>View Details</summary>
@@ -91,13 +84,13 @@
       </div>
 
       <div class="col-md-4">
-        <div class="card" style="background: white; padding: 0; overflow: hidden;">
+        <div class="card">
           <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=600"
             class="card-img-top" alt="Blue Star">
-          <div style="padding: 15px;">
+          <div>
             <span class="badge-tag">1 BHK</span>
             <span class="sold-badge">Sold</span>
-            <h4 style="margin: 10px 0;">Blue Star</h4>
+            <h4>Blue Star</h4>
             <p>📍 Nashik | 💰 25L</p>
             <details>
               <summary>View Details</summary>
@@ -110,11 +103,12 @@
     </div>
   </div>
 
-  <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #ddd;">
+  <footer>
     <small>© 2026 Skyline Properties | Built with ❤️</small>
   </footer>
 
   <script src="projectx.js"></script>
 </body>
 
+</html>
 </html>
