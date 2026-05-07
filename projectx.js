@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -6,22 +7,7 @@
   <meta name="description" content="Skyline Properties - Find your dream home">
   <title>Skyline Properties</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-    body { background-color: #f0f4f8; font-family: Arial, sans-serif; }
-    h1 { color: #2c3e50; }
-    .card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 10px; }
-    .card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-    .card-img-top { height: 180px; object-fit: cover; border-radius: 10px 10px 0 0; }
-    .sidebar { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .badge-tag { background-color: #28a745; color: white; padding: 3px 8px; border-radius: 5px; font-size: 12px; }
-    details summary { cursor: pointer; color: #0d6efd; font-weight: bold; }
-    details p { font-size: 14px; margin-top: 6px; }
-    .sold-badge { background-color: #dc3545; color: white; padding: 3px 8px; border-radius: 5px; font-size: 12px; }
-    meter { width: 100%; }
-    .search-btn { margin-top: 8px; }
-    .hero { background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; }
-    #api-result { display: none; background: #e8f4fd; border-left: 4px solid #3498db; border-radius: 8px; padding: 10px 16px; margin: 10px auto; width: 50%; font-size: 13px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -204,60 +190,6 @@
   © <time datetime="2026">2026</time> Skyline Properties | Mumbai, India | All rights reserved.
 </p>
 
-<script>
-  async function searchCity() {
-    const city = document.getElementById("searchInput").value.trim();
-    const resultBox = document.getElementById("api-result");
-
-    if (!city) { filterCards(); return; }
-
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(city)}&format=json&limit=1`;
-
-    try {
-      const res = await fetch(url, { headers: { "Accept-Language": "en" } });
-      const data = await res.json();
-
-      if (data.length > 0) {
-        const place = data[0];
-        resultBox.style.display = "block";
-        resultBox.innerHTML = `✅ <strong>${place.display_name}</strong><br>
-          📍 Lat: ${parseFloat(place.lat).toFixed(4)} | Lon: ${parseFloat(place.lon).toFixed(4)}`;
-      } else {
-        resultBox.style.display = "block";
-        resultBox.innerHTML = "❌ City not found.";
-      }
-    } catch (err) {
-      resultBox.style.display = "block";
-      resultBox.innerHTML = "⚠️ Error: " + err.message;
-    }
-
-    filterCards();
-  }
-
-  function filterCards() {
-    const city = document.getElementById("searchInput").value.toLowerCase();
-    const cards = document.querySelectorAll("#card-container .col-md-4");
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = (text.includes(city) || city === "") ? "block" : "none";
-    });
-  }
-
-  function resetFilters() {
-    document.getElementById("searchInput").value = "";
-    document.getElementById("priceFilter").value = "All";
-    document.getElementById("bhkFilter").value = "All";
-    document.getElementById("api-result").style.display = "none";
-    filterCards();
-  }
-
-  document.getElementById("searchInput").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") searchCity();
-  });
-
-  window.onload = function() {
-    console.log("Skyline Properties loaded");
-  };
-</script>
-
+<script src="script.js"></script>
 </body>
+</html>
