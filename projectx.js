@@ -1,11 +1,15 @@
 
 async function searchCity() {
-  const city = document.getElementById("searchInput").value.trim();
+  const cityInput = document.getElementById("searchInput").value.trim();
   const resultBox = document.getElementById("api-result");
 
-  if (!city) { filterCards(); return; }
+  if (!cityInput) { 
+    resultBox.style.display = "none";
+    filterCards(); 
+    return; 
+  }
 
-  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(city)}&format=json&limit=1`;
+  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(cityInput)}&format=json&limit=1`;
 
   try {
     const res = await fetch(url, { headers: { "Accept-Language": "en" } });
@@ -14,8 +18,8 @@ async function searchCity() {
     if (data.length > 0) {
       const place = data[0];
       resultBox.style.display = "block";
-      resultBox.innerHTML = `✅ <strong>${place.display_name}</strong><br>
-        📍 Lat: ${parseFloat(place.lat).toFixed(4)} | Lon: ${parseFloat(place.lon).toFixed(4)}`;
+      resultBox.innerHTML = `<div>📍 <strong>${place.display_name}</strong></div>
+        <div style="margin-top:5px; color:#64748b;">📍 Lat: ${parseFloat(place.lat).toFixed(4)} | Lon: ${parseFloat(place.lon).toFixed(4)}</div>`;
     } else {
       resultBox.style.display = "block";
       resultBox.innerHTML = "❌ City not found.";
@@ -29,32 +33,30 @@ async function searchCity() {
 }
 
 function filterCards() {
-  const city = document.getElementById("searchInput").value.toLowerCase();
-  const price = document.getElementById("priceFilter").value;
-  const bhk = document.getElementById("bhkFilter").value;
+  const citySearch = document.getElementById("searchInput").value.toLowerCase();
+  const priceFilter = document.getElementById("priceFilter").value;
+  const bhkFilter = document.getElementById("bhkFilter").value;
   
-  const cards = document.querySelectorAll("#card-container .col-md-4");
+  const cards = document.querySelectorAll("#card-container .card");
   
   cards.forEach(card => {
     const text = card.innerText.toLowerCase();
+    const cardCity = card.getAttribute("data-city") || "";
+    const cardBhk = card.getAttribute("data-bhk") || "";
+    const cardPrice = parseInt(card.getAttribute("data-price")) || 0;
     
-    // City Search
-    const cityMatch = text.includes(city) || city === "";
+    // City Search (checks both data-city and overall text)
+    const cityMatch = citySearch === "" || cardCity.includes(citySearch) || text.includes(citySearch);
     
     // BHK Filter
-    const bhkMatch = bhk === "All" || text.includes(bhk.toLowerCase());
+    const bhkMatch = bhkFilter === "All" || cardBhk === bhkFilter.split(" ")[0];
     
-    // Price Filter (Simple logic based on text content)
+    // Price Filter
     let priceMatch = true;
-    if (price === "Below 50L") {
-      // Find numbers followed by 'L' or 'Cr'
-      const priceText = text.match(/(\d+)l/);
-      if (priceText) {
-        const val = parseInt(priceText[1]);
-        priceMatch = val < 50;
-      }
-    } else if (price === "Above 1Cr") {
-      priceMatch = text.includes("1cr") || text.includes("above 1cr");
+    if (priceFilter === "Below 50L") {
+      priceMatch = cardPrice < 50;
+    } else if (priceFilter === "Above 1Cr") {
+      priceMatch = cardPrice >= 100;
     }
 
     card.style.display = (cityMatch && bhkMatch && priceMatch) ? "block" : "none";
@@ -70,10 +72,18 @@ function resetFilters() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("searchInput").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") searchCity();
-  });
-  document.getElementById("priceFilter").addEventListener("change", filterCards);
-  document.getElementById("bhkFilter").addEventListener("change", filterCards);
+  const searchInput = document.getElementById("searchInput");
+  if(searchInput) {
+    searchInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") searchCity();
+    });
+  }
+  
+  const priceFilter = document.getElementById("priceFilter");
+  if(priceFilter) priceFilter.addEventListener("change", filterCards);
+  
+  const bhkFilter = document.getElementById("bhkFilter");
+  if(bhkFilter) bhkFilter.addEventListener("change", filterCards);
+  
   console.log("Skyline Properties loaded");
 });
