@@ -18,15 +18,15 @@ async function searchCity() {
     if (data.length > 0) {
       const place = data[0];
       resultBox.style.display = "block";
-      resultBox.innerHTML = `<div>📍 <strong>${place.display_name}</strong></div>
-        <div style="margin-top:5px; color:#64748b;">📍 Lat: ${parseFloat(place.lat).toFixed(4)} | Lon: ${parseFloat(place.lon).toFixed(4)}</div>`;
+      resultBox.innerHTML = `<div> <strong>${place.display_name}</strong></div>
+        <div style="margin-top:5px; color:#64748b;"> Lat: ${parseFloat(place.lat).toFixed(4)} | Lon: ${parseFloat(place.lon).toFixed(4)}</div>`;
     } else {
       resultBox.style.display = "block";
-      resultBox.innerHTML = "❌ City not found.";
+      resultBox.innerHTML = " City not found.";
     }
   } catch (err) {
     resultBox.style.display = "block";
-    resultBox.innerHTML = "⚠️ Error: " + err.message;
+    resultBox.innerHTML = " Error: " + err.message;
   }
 
   filterCards();
